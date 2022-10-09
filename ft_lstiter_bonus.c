@@ -12,11 +12,25 @@
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(int))
 {
 	while (lst)
 	{
 		f(lst->content);
 		lst = lst->next;
 	}
+}
+
+int	ft_get_smallest(t_list *lst, int (*compare)(int, int))
+{
+	int	tmp;
+
+	tmp = lst->content;
+	while (lst)
+	{
+		if(compare(lst->content, tmp))
+			tmp = lst->content;
+		lst = lst->next;
+	}
+	return tmp;
 }
