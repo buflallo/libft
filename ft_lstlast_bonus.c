@@ -23,7 +23,7 @@ t_list	*ft_lstlast(t_list *lst)
 	return (lst);
 }
 
-t_list	*ft_lstBeforLast(t_list *lst)
+t_list	*ft_lstbeforlast(t_list *lst)
 {
 	int	i;
 

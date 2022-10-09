@@ -20,7 +20,7 @@
 
 typedef struct s_list
 {
-	int			content;
+	int				content;
 	struct s_list	*next;
 }					t_list;
 
@@ -29,8 +29,8 @@ void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t count, size_t size);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstadd_front(t_list **alst, t_list *new);
-t_list	*ft_lstBeforLast(t_list *lst);
-int	ft_get_smallest(t_list *lst, int (*compare)(int, int));
+t_list	*ft_lstbeforlast(t_list *lst);
+int		ft_get_smallest(t_list *lst, int (*compare)(int, int));
 void	ft_lstclear(t_list **lst, void (*del)(int));
 void	ft_lstdelone(t_list *lst, void (*del)(int));
 char	*ft_strtrim(char const *s1, char const *set);

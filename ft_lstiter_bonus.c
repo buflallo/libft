@@ -28,9 +28,9 @@ int	ft_get_smallest(t_list *lst, int (*compare)(int, int))
 	tmp = lst->content;
 	while (lst)
 	{
-		if(compare(lst->content, tmp))
+		if (compare(lst->content, tmp))
 			tmp = lst->content;
 		lst = lst->next;
 	}
-	return tmp;
+	return (tmp);
 }
